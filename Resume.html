@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arunbalaji S - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --heading-color: #0F172A;
+            --text-color: #334155;
+            --light-text: #64748B;
+            --border-color: #E2E8F0;
+            --bg-color: #FFFFFF;
+            --section-bg: #F8FAFC;
+            --skill-bg: #EFF6FF;
+            --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 230mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+            min-height: 297mm;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2563EB;
+            padding-bottom: 20px;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            color: var(--light-text);
+            text-decoration: none;
+        }
+
+        .contact-item:hover {
+            color: var(--primary-color);
+            transition: color 0.2s ease;
+        }
+
+        .contact-item:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .location {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Section Headers */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2563EB;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 4px;
+        }
+
+        /* Professional Summary */
+        .summary {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #374151;
+            text-align: justify;
+        }
+
+        /* Experience Section */
+        .experience-item, .project-item {
+            margin-bottom: 20px;
+            break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .company {
+            font-size: 14px;
+            color: #2563EB;
+            font-weight: 500;
+        }
+
+        .duration {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .achievements {
+            list-style: none;
+            margin-top: 6px;
+            text-align: justify;
+        }
+
+        .achievements li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 2px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #374151;
+        }
+
+        .achievements li:before {
+            content: "•";
+            color: #2563EB;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .project-header {
+            margin-bottom: 6px;
+        }
+
+        .project-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
+
+        .project-subtitle {
+            font-size: 13px;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .tech-stack {
+            font-size: 12px;
+            color: #2563EB;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .project-description {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-category {
+            background: var(--skill-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            break-inside: avoid;
+        }
+
+        .skill-category-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+
+        .skill-list {
+            font-size: 12px;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        /* Education Section */
+        .education-item {
+            /* margin-bottom: 12px; */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .degree {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
+
+        .institution {
+            font-size: 13px;
+            color: #2563EB;
+            margin-bottom: 2px;
+        }
+
+        .edu-duration {
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        /* Languages Section */
+        .languages {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 10px;
+            color: #0c4a6e;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                font-size: 10px;
+            }
+
+            .container {
+                padding: 0mm 8mm;
+                max-width: none;
+                margin: 0;
+            }
+
+            .section {
+                margin-bottom: 18px;
+                /* break-inside: avoid; */
+            }
+
+            .experience-item, .project-item {
+                margin-bottom: 14px;
+                break-inside: avoid;
+            }
+
+            .contact-info {
+                gap: 12px;
+            }
+
+            .contact-info a[href]:after {
+                content: none !important;
+            }
+
+            .skills-grid {
+                gap: 6px;
+            }
+
+            .skill-category {
+                background: var(--skill-bg) !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+
+            .language-item {
+                background: #f0f9ff !important;
+                border: 1px solid #bae6fd !important;
+            }
+
+            .header {
+                border-bottom: 2px solid #2563EB !important;
+            }
+
+            .section-title {
+                color: #2563EB !important;
+                border-bottom: 1px solid #e5e7eb !important;
+            }
+        }
+
+        @page {
+            margin: 0.4in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">ARUNBALAJI S</h1>
+            <div class="contact-info">
+                <a href="mailto:arunjegan21@gmail.com" class="contact-item" aria-label="Email address">
+                    <span>✉️</span> arunjegan21@gmail.com
+                </a>
+                <a href="tel:+917639067968" class="contact-item" aria-label="Phone number">
+                    <span>📞</span> +91 76390 67968
+                </a>
+                <a href="https://www.linkedin.com/in/arunbalaji-s-175807219/" class="contact-item" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                    <span>💼</span> LinkedIn Profile
+                </a>
+                <a href="https://portfolio-three-omega-52.vercel.app/" class="contact-item" aria-label="Portfolio website" target="_blank" rel="noopener noreferrer">
+                    <span>🌐</span> Portfolio
+                </a>
+                <span class="location">📍 Chennai–600088</span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Results-driven Software Engineer with 3+ years of experience in developing enterprise-grade solutions for healthcare systems and business intelligence platforms. Skilled in .NET (Core & Framework), WinForms, WPF (MVVM), React.js, Next.js, SQL, and ASP.NET Core Web APIs, with expertise in desktop application development, scalable database design, and modern UI engineering. Adept at delivering solutions that optimize workflows, automate processes, and enhance user experience across large-scale applications.
+            </p>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer</div>
+                        <div class="company">Key Software, Inc. | Chennai</div>
+                    </div>
+                    <div class="duration">Jan 2024 – Present</div>
+                </div>
+                <ul class="achievements">
+                    <li>Developed and modernized healthcare management systems by building desktop applications in WinForms and WPF (MVVM) and web components using React.js and ASP.NET Core APIs</li>
+                    <li>Designed and optimized SQL Server databases, ensuring efficiency and data consistency for healthcare workflows</li>
+                    <li>Provided client support and enhancements for data integration tools, streamlining healthcare data processing</li>
+                    <li>Partnered with cross-functional teams to deliver reliable, full-stack solutions tailored to client needs</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer</div>
+                        <div class="company">Syncfusion Software Pvt. Ltd. | Chennai</div>
+                    </div>
+                    <div class="duration">Nov 2022 – Jan 2024</div>
+                </div>
+                <ul class="achievements">
+                    <li>Enhanced BoldBI Dashboard Designer, a global BI product, by implementing new features including tooltip customization for all widgets</li>
+                    <li>Resolved 30+ internal bugs and addressed 20+ client-reported incidents, improving product stability and reliability</li>
+                    <li>Worked with TypeScript, jQuery, ASP.NET Core, and SQL to improve dashboard interactivity and scalability</li>
+                    <li>Collaborated with product and QA teams to deliver a robust, user-friendly dashboard experience</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <!-- <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;"> -->
+                    <div class="project-title">Interactive Quiz Game</div>
+                    <div class="project-subtitle">Freelance Project - Center for Environment and Development</div>
+                    <!-- </div> -->
+                    <div class="tech-stack">Tech Stack: Next.js, React.js, ASP.NET Core Web API</div>
+                </div>
+                <p class="project-description">An interactive quiz web application built for water management awareness programs to educate and engage participants.</p>
+                <ul class="achievements">
+                    <li>Designed a responsive UI with Next.js, delivering a modern and user-friendly experience</li>
+                    <li>Developed backend services using ASP.NET Core Web API for secure, scalable data handling</li>
+                    <li>Integrated gamification features such as real-time scoring to boost user engagement</li>
+                </ul>
+            </div>
+            
+            <!-- <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">FTP Downloader</div>
+                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL</div>
+                </div>
+                <p class="project-description">A tool to automatically download eligibility files from SFTP and FTP servers into client environments.</p>
+                <ul class="achievements">
+                    <li>Automated secure, scheduled downloads to streamline file collection and minimize manual effort</li>
+                </ul>
+            </div> -->
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Eligibility Data Loader</div>
+                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL, React.js</div>
+                </div>
+                <p class="project-description">A desktop tool to load eligibility data files based on MSO-specific schemas with transformation capabilities.</p>
+                <ul class="achievements">
+                    <li>Eliminated 100+ redundant schema definitions by analyzing the database to improve maintainability</li>
+                    <li>Implemented dynamic transformations with a React-based query builder within WinForms application, replacing hardcoded stored procedures and reducing support needs</li>
+                    <li>Enabled runtime schema selection, allowing users to process files matching multiple schemas seamlessly</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Benefits File Loader</div>
+                    <div class="tech-stack">Tech Stack: WPF (MVVM), ADO.NET, SQL</div>
+                </div>
+                <p class="project-description">An automated solution to process Benefits DOM and OPT files, replacing a slow manual process with efficient job-based execution.</p>
+                <ul class="achievements">
+                    <li>Reduced file loading time from 2+ hours to under 10 minutes, regardless of file volume</li>
+                    <li>Automated file validation and processing, minimizing manual errors and effort</li>
+                    <li>Deployed the solution in client environments and provided continuous support and updates</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Eligibility Management System</div>
+                    <div class="tech-stack">Tech Stack: WPF (MVVM), ADO.NET, SQL</div>
+                </div>
+                <p class="project-description">A UI-driven system to load, validate, and transform eligibility data files, with support for healthcare system integration.</p>
+                <ul class="achievements">
+                    <li>Built validation and review workflows, enabling users to inspect and correct data before processing</li>
+                    <li>Developed interactive transformation screens, allowing schema-level customization</li>
+                    <li>Implemented integration with multiple healthcare systems, generating outputs in proprietary formats</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Languages</div>
+                    <div class="skill-list">C#, JavaScript (ES6+), TypeScript, SQL, T-SQL</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Frontend Technologies</div>
+                    <div class="skill-list">React.js, Next.js, HTML5, CSS3, jQuery, Responsive UI Design</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Database</div>
+                    <div class="skill-list">SQL Server, Stored Procedures, Query Optimization</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Backend & APIs</div>
+                    <div class="skill-list">ASP.NET Core (MVC/API), .NET Framework, Entity Framework, ADO .Net, LINQ, REST APIs</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Desktop Development</div>
+                    <div class="skill-list">WinForms, WPF (MVVM), XAML</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Tools & DevOps</div>
+                    <div class="skill-list">Git, GitHub, JIRA, Azure DevOps, Agile/Scrum</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div>
+                    <div class="degree">B.E. Electronics and Communication Engineering</div>
+                    <div class="institution">Thanthai Periyar Government Institute of Technology, Vellore</div>
+                </div>
+                <div class="edu-duration">2018 – 2022</div>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages">
+                <div class="language-item">English (Fluent)</div>
+                <div class="language-item">Tamil (Native)</div>
+                <div class="language-item">German (A1 Level)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
