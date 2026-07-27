@@ -414,21 +414,50 @@
         <!-- Projects -->
         <div class="section">
             <h2 class="section-title">Key Projects</h2>
-            
+
             <div class="project-item">
                 <div class="project-header">
-                    <div class="project-title">Interactive Quiz Game</div>
-                    <div class="project-subtitle">Freelance Project - Center for Environment and Development</div>
-                    <div class="tech-stack">Tech Stack: Next.js, React.js, ASP.NET Core Web API</div>
+                    <div class="project-title">Eligibility Management System</div>
+                    <div class="tech-stack">Tech Stack: WPF (MVVM), WinForms, ADO.NET, SQL Server</div>
                 </div>
-                <p class="project-description">An interactive quiz web application built for water management awareness programs to educate and engage participants.</p>
+                <p class="project-description">A configurable healthcare ETL platform for importing, validating, transforming, comparing, and generating eligibility data across multiple healthcare systems.</p>
                 <ul class="achievements">
-                    <li>Designed a responsive UI with Next.js, delivering a modern and user-friendly experience</li>
-                    <li>Developed backend services using ASP.NET Core Web API for secure, scalable data handling</li>
-                    <li>Integrated gamification features such as real-time scoring to boost user engagement</li>
+                    <li>Developed configurable pipelines for file parsing, validation, transformation, and output generation using metadata-driven configuration.</li>
+                    <li>Built scalable processing workflows capable of handling <b>hundreds of thousands of records</b> across multiple file formats.</li>
+                    <li>Developed validation, transformation, and member comparison modules to standardize and reconcile healthcare eligibility data.</li>
+                    <li>Optimized SQL processing and batch operations to improve performance for large-volume data.</li>
+                    <li>Contributed to the migration from WPF (MVVM) to WinForms and collaborated with the solution architect to deliver new features.</li>
                 </ul>
             </div>
-            
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Benefits File Loader</div>
+                    <div class="tech-stack">Tech Stack: WPF, Dapper, SQL Server</div>
+                </div>
+                <p class="project-description">An automated desktop application that replaced a manual Benefits DOM and OPT file loading process.</p>
+                <ul class="achievements">
+                    <li>Owned the complete application lifecycle, from identifying the business need to design, development, testing, deployment, and ongoing production support.</li>
+                    <li>Reduced file processing time from <b>2+ hours to under 10 minutes</b> by automating file parsing, validation, and database loading, regardless of file size.</li>
+                    <li>Validated application accuracy against production data before deployment to ensure reliable processing.</li>
+                    <li>Deployed the solution to client environments and continue providing maintenance and feature enhancements.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">Eligibility Data Loader</div>
+                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL Server, React.js</div>
+                </div>
+                <p class="project-description">A configurable desktop application for loading and transforming healthcare eligibility files across multiple MSO-specific schemas.</p>
+                <ul class="achievements">
+                    <li>Eliminated <b>100+ redundant schema definitions</b> by redesigning the database-driven schema model, significantly improving maintainability.</li>
+                    <li>Designed and implemented a React-based dynamic query builder integrated into a WinForms application, replacing hardcoded stored procedures and reducing ongoing support effort.</li>
+                    <li>Enabled runtime schema selection, allowing users to process files matching multiple schemas seamlessly.</li>
+                    <li>Optimized database operations and file processing for large datasets.</li>
+                </ul>
+            </div>
+
             <!-- <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">FTP Downloader</div>
@@ -442,51 +471,15 @@
 
             <div class="project-item">
                 <div class="project-header">
-                    <div class="project-title">Eligibility Data Loader</div>
-                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL Server, React.js</div>
+                    <div class="project-title">Interactive Quiz Game</div>
+                    <div class="project-subtitle">Freelance Project - Center for Environment and Development</div>
+                    <div class="tech-stack">Tech Stack: Next.js, React.js, ASP.NET Core Web API</div>
                 </div>
-                <p class="project-description">A configurable desktop application for loading and transforming healthcare eligibility files across multiple MSO-specific schemas.</p>
+                <p class="project-description">An interactive web application developed to promote water management awareness through engaging quiz-based learning.</p>
                 <ul class="achievements">
-                    <li>Eliminated <b>100+ redundant schema definitions</b> by redesigning the database-driven schema model, significantly improving maintainability.</li>
-                    <li>Designed and implemented a React-based dynamic query builder integrated into a WinForms application, replacing hardcoded stored procedures and reducing ongoing support effort.</li>
-                    <li>Enabled runtime schema selection, allowing users to process files matching multiple schemas seamlessly.</li>
-                    <li>Optimized file processing and database operations for large datasets.</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <div class="project-header">
-                    <div class="project-title">Benefits File Loader</div>
-                    <div class="tech-stack">Tech Stack: WPF, Dapper, SQL Server</div>
-                </div>
-                <p class="project-description">An automated desktop application for processing Benefits DOM and OPT files, replacing a manual, time-consuming workflow.</p>
-                <ul class="achievements">
-                    <li>Owned the complete application lifecycle, from requirements analysis and solution design to development, testing, production deployment, and ongoing support.</li>
-                    <li>Identified a recurring support challenge, proposed an automated solution, secured stakeholder approval, and independently developed the application.</li>
-                    <li>Automated parsing, validation, and database loading, significantly reducing manual effort and operational errors.</li>
-                    <li>Reduced file processing time from <b>2+ hours to under 10 minutes</b>, regardless of file size.</li>
-                    <li>Verified application accuracy against production data by comparing automated results with the existing manual process before deployment.</li>
-                    <li>Deployed the solution to client environments and continue providing production support, maintenance, and feature enhancements.</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <div class="project-header">
-                    <div class="project-title">Eligibility Management System</div>
-                    <div class="tech-stack">Tech Stack: WPF (MVVM), WinForms, ADO.NET, SQL Server</div>
-                </div>
-                <p class="project-description">A configurable ETL platform for healthcare eligibility data that enables users to import, validate, transform, compare, and generate eligibility files for multiple healthcare systems through configurable pipelines.</p>
-                <ul class="achievements">
-                    <li>Designed and developed a configurable pipeline architecture supporting file identification, layout configuration, validation, transformation logic, and transactional logic through metadata rather than hardcoded logic.</li>
-                    <li>Built a scalable file processing engine capable of parsing and loading <b>hundreds of thousands of records</b> from fixed-width, delimited, Excel and EDI file formats.</li>
-                    <li>Developed configurable parsing logic that supports multiple client-specific file layouts without requiring application changes.</li>
-                    <li>Implemented a comprehensive validation framework with interactive review screens, enabling users to identify, correct, and resolve data issues before processing.</li>
-                    <li>Developed configurable transformation workflows to map incoming eligibility data into standardized healthcare tables.</li>
-                    <li>Built a data comparison engine to identify differences between incoming and existing member records, enabling users to approve or reject individual field-level changes before final processing.</li>
-                    <li>Implemented transactional output generation for multiple healthcare systems based on approved data changes.</li>
-                    <li>Optimized large-volume data processing through SQL tuning, bulk data loading, and batch processing techniques.</li>
-                    <li>Migrated the product from WPF (MVVM) to WinForms following an architectural direction change.</li>
-                    <li>Collaborated closely with the solution architect to design and implement new features, while providing technical guidance and implementation support to teammates.</li>
+                    <li>Designed a responsive and intuitive user interface using Next.js and React.js.</li>
+                    <li>Developed ASP.NET Core Web APIs for quiz management, scoring, and result processing.</li>
+                    <li>Integrated real-time scoring and gamification features to improve participant engagement.</li>
                 </ul>
             </div>
         </div>
