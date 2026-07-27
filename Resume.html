@@ -278,6 +278,7 @@
         @media print {
             body {
                 -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
                 color-adjust: exact;
                 font-size: 10px;
             }
@@ -290,11 +291,11 @@
 
             .section {
                 margin-bottom: 18px;
-                /* break-inside: avoid; */
             }
 
             .experience-item, .project-item {
                 margin-bottom: 14px;
+                page-break-inside: avoid;
                 break-inside: avoid;
             }
 
@@ -327,6 +328,13 @@
             .section-title {
                 color: #2563EB !important;
                 border-bottom: 1px solid #e5e7eb !important;
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            .achievements {
+                page-break-inside: avoid;
+                break-inside: avoid;
             }
         }
 
@@ -361,7 +369,7 @@
         <div class="section">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                Results-driven Software Engineer with 3+ years of experience in developing enterprise-grade solutions for healthcare systems and business intelligence platforms. Skilled in .NET (Core & Framework), WinForms, WPF (MVVM), React.js, Next.js, SQL, and ASP.NET Core Web APIs, with expertise in desktop application development, scalable database design, and modern UI engineering. Adept at delivering solutions that optimize workflows, automate processes, and enhance user experience across large-scale applications.
+                Results-driven Software Engineer with 3.5+ years of experience developing enterprise applications for healthcare and business intelligence domains. Proficient in .NET (Core & Framework), WinForms, WPF (MVVM), ASP.NET Core, React.js, Next.js, SQL Server, and REST APIs, with expertise in desktop application development, scalable data processing, and database design. Experienced in building configurable, high-performance solutions that automate complex workflows, improve operational efficiency, and support large-scale data processing.
             </p>
         </div>
 
@@ -378,10 +386,11 @@
                     <div class="duration">Jan 2024 – Present</div>
                 </div>
                 <ul class="achievements">
-                    <li>Developed and modernized healthcare management systems by building desktop applications in WinForms and WPF (MVVM) and web components using React.js and ASP.NET Core APIs</li>
-                    <li>Designed and optimized SQL Server databases, ensuring efficiency and data consistency for healthcare workflows</li>
-                    <li>Provided client support and enhancements for data integration tools, streamlining healthcare data processing</li>
-                    <li>Partnered with cross-functional teams to deliver reliable, full-stack solutions tailored to client needs</li>
+                    <li>Developed and enhanced healthcare desktop applications using <b>WinForms, WPF (MVVM), ADO.NET, ASP.NET Core Web APIs, and React.js.</b></li>
+                    <li>Designed and optimized SQL Server databases, stored procedures, and data processing workflows to improve application performance and data integrity.</li>
+                    <li>Built configurable data processing and automation solutions for healthcare eligibility and benefits management, reducing manual effort and improving operational efficiency.</li>
+                    <li>Collaborated with architects, developers, and business stakeholders to design, implement, and deliver scalable software solutions.</li>
+                    <li>Provided production support, troubleshooting, and feature enhancements for enterprise healthcare applications.</li>
                 </ul>
             </div>
 
@@ -394,10 +403,10 @@
                     <div class="duration">Nov 2022 – Jan 2024</div>
                 </div>
                 <ul class="achievements">
-                    <li>Enhanced BoldBI Dashboard Designer, a global BI product, by implementing new features including tooltip customization for all widgets</li>
-                    <li>Resolved 30+ internal bugs and addressed 20+ client-reported incidents, improving product stability and reliability</li>
-                    <li>Worked with TypeScript, jQuery, ASP.NET Core, and SQL to improve dashboard interactivity and scalability</li>
-                    <li>Collaborated with product and QA teams to deliver a robust, user-friendly dashboard experience</li>
+                    <li>Developed new features for the <b>Bold BI Dashboard Designer</b>, enhancing dashboard customization and user experience.</li>
+                    <li>Implemented tooltip customization across dashboard widgets using <b>TypeScript, jQuery, ASP.NET Core, and SQL Server.</b></li>
+                    <li>Resolved <b>30+ internal defects</b> and <b>20+ customer-reported issues</b>, improving product stability, reliability, and customer satisfaction.</li>
+                    <li>Collaborated with product management, QA, and development teams to deliver high-quality releases in an Agile environment.</li>
                 </ul>
             </div>
         </div>
@@ -408,10 +417,8 @@
             
             <div class="project-item">
                 <div class="project-header">
-                    <!-- <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;"> -->
                     <div class="project-title">Interactive Quiz Game</div>
                     <div class="project-subtitle">Freelance Project - Center for Environment and Development</div>
-                    <!-- </div> -->
                     <div class="tech-stack">Tech Stack: Next.js, React.js, ASP.NET Core Web API</div>
                 </div>
                 <p class="project-description">An interactive quiz web application built for water management awareness programs to educate and engage participants.</p>
@@ -425,7 +432,7 @@
             <!-- <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">FTP Downloader</div>
-                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL</div>
+                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL Server</div>
                 </div>
                 <p class="project-description">A tool to automatically download eligibility files from SFTP and FTP servers into client environments.</p>
                 <ul class="achievements">
@@ -436,39 +443,50 @@
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Eligibility Data Loader</div>
-                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL, React.js</div>
+                    <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL Server, React.js</div>
                 </div>
-                <p class="project-description">A desktop tool to load eligibility data files based on MSO-specific schemas with transformation capabilities.</p>
+                <p class="project-description">A configurable desktop application for loading and transforming healthcare eligibility files across multiple MSO-specific schemas.</p>
                 <ul class="achievements">
-                    <li>Eliminated 100+ redundant schema definitions by analyzing the database to improve maintainability</li>
-                    <li>Implemented dynamic transformations with a React-based query builder within WinForms application, replacing hardcoded stored procedures and reducing support needs</li>
-                    <li>Enabled runtime schema selection, allowing users to process files matching multiple schemas seamlessly</li>
+                    <li>Eliminated <b>100+ redundant schema definitions</b> by redesigning the database-driven schema model, significantly improving maintainability.</li>
+                    <li>Designed and implemented a React-based dynamic query builder integrated into a WinForms application, replacing hardcoded stored procedures and reducing ongoing support effort.</li>
+                    <li>Enabled runtime schema selection, allowing users to process files matching multiple schemas seamlessly.</li>
+                    <li>Optimized file processing and database operations for large datasets.</li>
                 </ul>
             </div>
 
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Benefits File Loader</div>
-                    <div class="tech-stack">Tech Stack: WPF (MVVM), Dapper, SQL</div>
+                    <div class="tech-stack">Tech Stack: WPF, Dapper, SQL Server</div>
                 </div>
-                <p class="project-description">An automated solution to process Benefits DOM and OPT files, replacing a slow manual process with efficient job-based execution.</p>
+                <p class="project-description">An automated desktop application for processing Benefits DOM and OPT files, replacing a manual, time-consuming workflow.</p>
                 <ul class="achievements">
-                    <li>Reduced file loading time from 2+ hours to under 10 minutes, regardless of file volume</li>
-                    <li>Automated file validation and processing, minimizing manual errors and effort</li>
-                    <li>Deployed the solution in client environments and provided continuous support and updates</li>
+                    <li>Owned the complete application lifecycle, from requirements analysis and solution design to development, testing, production deployment, and ongoing support.</li>
+                    <li>Identified a recurring support challenge, proposed an automated solution, secured stakeholder approval, and independently developed the application.</li>
+                    <li>Automated parsing, validation, and database loading, significantly reducing manual effort and operational errors.</li>
+                    <li>Reduced file processing time from <b>2+ hours to under 10 minutes</b>, regardless of file size.</li>
+                    <li>Verified application accuracy against production data by comparing automated results with the existing manual process before deployment.</li>
+                    <li>Deployed the solution to client environments and continue providing production support, maintenance, and feature enhancements.</li>
                 </ul>
             </div>
 
             <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Eligibility Management System</div>
-                    <div class="tech-stack">Tech Stack: WPF (MVVM), ADO.NET, SQL</div>
+                    <div class="tech-stack">Tech Stack: WPF (MVVM), WinForms, ADO.NET, SQL Server</div>
                 </div>
-                <p class="project-description">A UI-driven system to load, validate, and transform eligibility data files, with support for healthcare system integration.</p>
+                <p class="project-description">A configurable ETL platform for healthcare eligibility data that enables users to import, validate, transform, compare, and generate eligibility files for multiple healthcare systems through configurable pipelines.</p>
                 <ul class="achievements">
-                    <li>Built validation and review workflows, enabling users to inspect and correct data before processing</li>
-                    <li>Developed interactive transformation screens, allowing schema-level customization</li>
-                    <li>Implemented integration with multiple healthcare systems, generating outputs in proprietary formats</li>
+                    <li>Designed and developed a configurable pipeline architecture supporting file identification, layout configuration, validation, transformation logic, and transactional logic through metadata rather than hardcoded logic.</li>
+                    <li>Built a scalable file processing engine capable of parsing and loading <b>hundreds of thousands of records</b> from fixed-width, delimited, Excel and EDI file formats.</li>
+                    <li>Developed configurable parsing logic that supports multiple client-specific file layouts without requiring application changes.</li>
+                    <li>Implemented a comprehensive validation framework with interactive review screens, enabling users to identify, correct, and resolve data issues before processing.</li>
+                    <li>Developed configurable transformation workflows to map incoming eligibility data into standardized healthcare tables.</li>
+                    <li>Built a data comparison engine to identify differences between incoming and existing member records, enabling users to approve or reject individual field-level changes before final processing.</li>
+                    <li>Implemented transactional output generation for multiple healthcare systems based on approved data changes.</li>
+                    <li>Optimized large-volume data processing through SQL tuning, bulk data loading, and batch processing techniques.</li>
+                    <li>Migrated the product from WPF (MVVM) to WinForms following an architectural direction change.</li>
+                    <li>Collaborated closely with the solution architect to design and implement new features, while providing technical guidance and implementation support to teammates.</li>
                 </ul>
             </div>
         </div>
