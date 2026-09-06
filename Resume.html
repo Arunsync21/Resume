@@ -66,12 +66,11 @@
             margin-bottom: 8px;
         }
 
-        .contact-item {
+        .contact-item,
+        .location {
             display: flex;
             align-items: center;
-            white-space: nowrap;
-            color: var(--light-text);
-            text-decoration: none;
+            gap: 8px;
         }
 
         .contact-item:hover {
@@ -85,9 +84,11 @@
             border-radius: 4px;
         }
 
-        .location {
-            font-size: 13px;
-            color: #6b7280;
+        .contact-item img,
+        .location img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
         }
 
         /* Section Headers */
@@ -203,59 +204,51 @@
         }
 
         /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .skill-category {
-            background: var(--skill-bg);
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 12px;
-            break-inside: avoid;
-        }
-
-        .skill-category-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 6px;
-        }
-
-        .skill-list {
+        .skill-item {
             font-size: 12px;
             color: #4b5563;
-            line-height: 1.4;
+            line-height: 1.5;
+        }
+
+        .skill-item strong {
+            color: #1f2937;
+            font-weight: 600;
         }
 
         /* Education Section */
         .education-item {
-            /* margin-bottom: 12px; */
+            margin-bottom: 8px;
+        }
+
+        .education-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 15px;
         }
 
         .degree {
             font-size: 14px;
             font-weight: 600;
             color: #1f2937;
-            margin-bottom: 2px;
-        }
-
-        .institution {
-            font-size: 13px;
-            color: #2563EB;
-            margin-bottom: 2px;
         }
 
         .edu-duration {
             font-size: 12px;
             color: #6b7280;
+            white-space: nowrap;
+        }
+
+        .institution {
+            font-size: 13px;
+            color: #2563EB;
+            margin-top: 2px;
         }
 
         /* Languages Section */
@@ -350,18 +343,25 @@
             <h1 class="name">ARUNBALAJI S</h1>
             <div class="contact-info">
                 <a href="mailto:arunjegan21@gmail.com" class="contact-item" aria-label="Email address">
-                    <span>✉️</span> arunjegan21@gmail.com
+                    <img src="/images/email.png" alt="Email" />
+                    arunjegan21@gmail.com
                 </a>
                 <a href="tel:+917639067968" class="contact-item" aria-label="Phone number">
-                    <span>📞</span> +91 76390 67968
+                    <img src="/images/phone.png" alt="Phone" />
+                    +91 76390 67968
                 </a>
                 <a href="https://www.linkedin.com/in/arunbalaji-s-175807219/" class="contact-item" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
-                    <span>💼</span> LinkedIn Profile
+                    <img src="/images/linkedin.png" alt="LinkedIn" />
+                    linkedin.com/in/arunbalaji-s-175807219
                 </a>
                 <a href="https://portfolio-three-omega-52.vercel.app/" class="contact-item" aria-label="Portfolio website" target="_blank" rel="noopener noreferrer">
-                    <span>🌐</span> Portfolio
+                    <img src="/images/portfolio.png" alt="Portfolio" />
+                    portfolio-three-omega-52.vercel.app
                 </a>
-                <span class="location">📍 Chennai–600088</span>
+                <span class="location">
+                    <img src="/images/location.png" alt="Location" />
+                    Chennai–600095
+                </span>
             </div>
         </div>
 
@@ -369,7 +369,7 @@
         <div class="section">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                Results-driven Software Engineer with 3.5+ years of experience developing enterprise applications for healthcare and business intelligence domains. Proficient in .NET (Core & Framework), WinForms, WPF (MVVM), ASP.NET Core, React.js, Next.js, SQL Server, and REST APIs, with expertise in desktop application development, scalable data processing, and database design. Experienced in building configurable, high-performance solutions that automate complex workflows, improve operational efficiency, and support large-scale data processing.
+                Software Engineer with 4 years of experience designing and developing enterprise applications in the healthcare and business intelligence domains. Skilled in C#, .NET Core, ASP.NET Core, WPF (MVVM), WinForms, React.js, Next.js, TypeScript, SQL Server, and REST APIs. Proven record of building configurable, high-performance data processing solutions that automate complex workflows, reduce processing time by over 90%, and support large-scale healthcare data operations. Experienced across the full software development life cycle (SDLC) in Agile/Scrum environments, from requirements gathering and system design to deployment and production support.
             </p>
         </div>
 
@@ -386,11 +386,13 @@
                     <div class="duration">Jan 2024 – Present</div>
                 </div>
                 <ul class="achievements">
-                    <li>Developed and enhanced healthcare desktop applications using <b>WinForms, WPF (MVVM), ADO.NET, ASP.NET Core Web APIs, and React.js.</b></li>
-                    <li>Designed and optimized SQL Server databases, stored procedures, and data processing workflows to improve application performance and data integrity.</li>
-                    <li>Built configurable data processing and automation solutions for healthcare eligibility and benefits management, reducing manual effort and improving operational efficiency.</li>
-                    <li>Collaborated with architects, developers, and business stakeholders to design, implement, and deliver scalable software solutions.</li>
-                    <li>Provided production support, troubleshooting, and feature enhancements for enterprise healthcare applications.</li>
+                    <li>Develop and enhance enterprise healthcare desktop and web applications using WinForms, WPF (MVVM), ADO.NET, ASP.NET Core Web APIs, and React.js.</li>
+                    <li>Design and optimize SQL Server databases, stored procedures, and batch data processing workflows, improving application performance and data integrity for large-volume datasets.</li>
+                    <li>Built configurable ETL and automation solutions for healthcare eligibility and benefits management, reducing file processing time from 2+ hours to under 10 minutes.</li>
+                    <li>Developed metadata-driven pipelines for file parsing, validation, transformation, and output generation, processing hundreds of thousands of records across multiple file formats.</li>
+                    <li>Eliminated 100+ redundant schema definitions by redesigning a database-driven schema model, significantly improving maintainability and reducing support effort.</li>
+                    <li>Own the complete application life cycle — requirements analysis, design, development, testing, deployment, and ongoing production support in client environments.</li>
+                    <li>Collaborated with architects, developers, and business stakeholders to design, and deliver scalable software solutions.</li>
                 </ul>
             </div>
 
@@ -403,10 +405,10 @@
                     <div class="duration">Nov 2022 – Jan 2024</div>
                 </div>
                 <ul class="achievements">
-                    <li>Developed new features for the <b>Bold BI Dashboard Designer</b>, enhancing dashboard customization and user experience.</li>
-                    <li>Implemented tooltip customization across dashboard widgets using <b>TypeScript, jQuery, ASP.NET Core, and SQL Server.</b></li>
-                    <li>Resolved <b>30+ internal defects</b> and <b>20+ customer-reported issues</b>, improving product stability, reliability, and customer satisfaction.</li>
-                    <li>Collaborated with product management, QA, and development teams to deliver high-quality releases in an Agile environment.</li>
+                    <li>Developed new features for the Bold BI Dashboard Designer, enhancing dashboard customization and user experience using TypeScript, jQuery, ASP.NET Core, and SQL Server.</li>
+                    <li>Implemented tooltip customization across dashboard widgets, improving data visualization usability for enterprise customers.</li>
+                    <li>Resolved 30+ internal defects and 20+ customer-reported issues, improving product stability, reliability, and customer satisfaction.</li>
+                    <li>Collaborated with product management, QA, and development teams to deliver high-quality releases in an Agile/Scrum environment using Git and Azure DevOps.</li>
                 </ul>
             </div>
         </div>
@@ -420,12 +422,9 @@
                     <div class="project-title">Eligibility Management System</div>
                     <div class="tech-stack">Tech Stack: WPF (MVVM), WinForms, ADO.NET, SQL Server</div>
                 </div>
-                <p class="project-description">A configurable healthcare ETL platform for importing, validating, transforming, comparing, and generating eligibility data across multiple healthcare systems.</p>
                 <ul class="achievements">
-                    <li>Developed configurable pipelines for file parsing, validation, transformation, and output generation using metadata-driven configuration.</li>
-                    <li>Built scalable processing workflows capable of handling <b>hundreds of thousands of records</b> across multiple file formats.</li>
-                    <li>Developed validation, transformation, and member comparison modules to standardize and reconcile healthcare eligibility data.</li>
-                    <li>Optimized SQL processing and batch operations to improve performance for large-volume data.</li>
+                    <li>Built a configurable healthcare ETL platform for importing, validating, transforming, comparing, and generating eligibility data for multiple healthcare systems.</li>
+                    <li>Developed validation, transformation, and member comparison modules to standardize and reconcile healthcare eligibility data; optimized SQL batch operations for large-volume processing.</li>
                     <li>Contributed to the migration from WPF (MVVM) to WinForms and collaborated with the solution architect to deliver new features.</li>
                 </ul>
             </div>
@@ -435,12 +434,9 @@
                     <div class="project-title">Benefits File Loader</div>
                     <div class="tech-stack">Tech Stack: WPF, Dapper, SQL Server</div>
                 </div>
-                <p class="project-description">An automated desktop application that replaced a manual Benefits DOM and OPT file loading process.</p>
                 <ul class="achievements">
-                    <li>Owned the complete application lifecycle, from identifying the business need to design, development, testing, deployment, and ongoing production support.</li>
-                    <li>Reduced file processing time from <b>2+ hours to under 10 minutes</b> by automating file parsing, validation, and database loading, regardless of file size.</li>
-                    <li>Validated application accuracy against production data before deployment to ensure reliable processing.</li>
-                    <li>Deployed the solution to client environments and continue providing maintenance and feature enhancements.</li>
+                    <li>Designed and delivered an automated desktop application replacing a manual benefits file loading process, reducing processing time from 2+ hours to under 10 minutes regardless of file size.</li>
+                    <li>Validated application output against production data before deployment; deployed to client environments and continue providing maintenance and enhancements.</li>
                 </ul>
             </div>
 
@@ -449,12 +445,9 @@
                     <div class="project-title">Eligibility Data Loader</div>
                     <div class="tech-stack">Tech Stack: WinForms, ADO.NET, SQL Server, React.js</div>
                 </div>
-                <p class="project-description">A configurable desktop application for loading and transforming healthcare eligibility files across multiple MSO-specific schemas.</p>
                 <ul class="achievements">
-                    <li>Eliminated <b>100+ redundant schema definitions</b> by redesigning the database-driven schema model, significantly improving maintainability.</li>
+                    <li>Developed a configurable desktop application for loading and transforming healthcare eligibility files across multiple MSO-specific schemas with runtime schema selection.</li>
                     <li>Designed and implemented a React-based dynamic query builder integrated into a WinForms application, replacing hardcoded stored procedures and reducing ongoing support effort.</li>
-                    <li>Enabled runtime schema selection, allowing users to process files matching multiple schemas seamlessly.</li>
-                    <li>Optimized database operations and file processing for large datasets.</li>
                 </ul>
             </div>
 
@@ -469,7 +462,7 @@
                 </ul>
             </div> -->
 
-            <div class="project-item">
+            <!-- <div class="project-item">
                 <div class="project-header">
                     <div class="project-title">Interactive Quiz Game</div>
                     <div class="project-subtitle">Freelance Project - Center for Environment and Development</div>
@@ -477,40 +470,45 @@
                 </div>
                 <p class="project-description">An interactive web application developed to promote water management awareness through engaging quiz-based learning.</p>
                 <ul class="achievements">
-                    <li>Designed a responsive and intuitive user interface using Next.js and React.js.</li>
+                    <li>Built a responsive web application promoting water management awareness through quiz-based learning, with real-time scoring and gamification features.</li>
                     <li>Developed ASP.NET Core Web APIs for quiz management, scoring, and result processing.</li>
-                    <li>Integrated real-time scoring and gamification features to improve participant engagement.</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
         <!-- Technical Skills -->
         <div class="section">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-category-title">Languages</div>
-                    <div class="skill-list">C#, JavaScript (ES6+), TypeScript, SQL, T-SQL</div>
+
+            <div class="skills-list">
+                <div class="skill-item">
+                    <strong>Languages:</strong>
+                    C#, JavaScript (ES6+), TypeScript, SQL, T-SQL
                 </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Frontend Technologies</div>
-                    <div class="skill-list">React.js, Next.js, HTML5, CSS3, jQuery, Responsive UI Design</div>
+
+                <div class="skill-item">
+                    <strong>Frontend Technologies:</strong>
+                    React.js, Next.js, HTML5, CSS3, jQuery, Responsive UI Design
                 </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Database</div>
-                    <div class="skill-list">SQL Server, Stored Procedures, Query Optimization</div>
+
+                <div class="skill-item">
+                    <strong>Database:</strong>
+                    Microsoft SQL Server, Stored Procedures, Query Optimization, Database Design, ETL
                 </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Backend & APIs</div>
-                    <div class="skill-list">ASP.NET Core, .NET Framework, ADO .Net, Dapper, Entity Framework, LINQ, REST APIs</div>
+
+                <div class="skill-item">
+                    <strong>Backend &amp; APIs:</strong>
+                    ASP.NET Core, .NET Core, .NET Framework, ADO.NET, Dapper, Entity Framework, LINQ, REST APIs, Web API
                 </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Desktop Development</div>
-                    <div class="skill-list">WinForms, WPF (MVVM), XAML</div>
+
+                <div class="skill-item">
+                    <strong>Desktop Development:</strong>
+                    WinForms, WPF (MVVM), XAML
                 </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">Tools & DevOps</div>
-                    <div class="skill-list">Git, GitHub, JIRA, Azure DevOps, Agile/Scrum</div>
+
+                <div class="skill-item">
+                    <strong>Tools &amp; DevOps:</strong>
+                    Git, GitHub, JIRA, Azure DevOps, Agile/Scrum
                 </div>
             </div>
         </div>
@@ -518,12 +516,20 @@
         <!-- Education -->
         <div class="section">
             <h2 class="section-title">Education</h2>
+
             <div class="education-item">
-                <div>
-                    <div class="degree">B.E. Electronics and Communication Engineering</div>
-                    <div class="institution">Thanthai Periyar Government Institute of Technology, Vellore</div>
+                <div class="education-header">
+                    <div class="degree">
+                        B.E. Electronics and Communication Engineering
+                    </div>
+                    <div class="edu-duration">
+                        2018 – 2022
+                    </div>
                 </div>
-                <div class="edu-duration">2018 – 2022</div>
+
+                <div class="institution">
+                    Thanthai Periyar Government Institute of Technology, Vellore
+                </div>
             </div>
         </div>
 
